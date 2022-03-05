@@ -1,0 +1,7 @@
+---
+- hosts: all
+  gather_facts: true
+  tasks:
+    - yum:
+        name: nginx
+      when: ansible_os_family == "CentOS"
